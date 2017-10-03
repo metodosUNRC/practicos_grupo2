@@ -1,30 +1,29 @@
-//Grupo N°2 - Fraschetti Ignacio - Torres Franco
+//Grupo NÂ°2 - Fraschetti Ignacio - Torres Franco
 //
-// Ejercicio1_PuntoFijo.cpp: define el punto de entrada de la aplicación de consola.
+// Ejercicio1_PuntoFijo.cpp: define el punto de entrada de la aplicaciÃ³n de consola.
 //
-// El siguiente programa determina las raíces por el método de punto fijo
+// El siguiente programa determina las raÃ­ces por el mÃ©todo de punto fijo
 //
-// Este programa determina los cruces por cero de una función, ingresando un valor aproximado dentro de una tolerancia especificada 
+// Este programa determina los cruces por cero de una funciÃ³n, ingresando un valor aproximado dentro de una tolerancia especificada 
 //  
 // El programa pide al usuario ingresar:
-//		Un valor inicial (x0) de la raíz;
+//		Un valor inicial (x0) de la raÃ­z;
 //		La tolerancia del resultado; 
-//		El número de iteraciones máximo a realizarse.
+//		El nÃºmero de iteraciones mÃ¡ximo a realizarse.
 //		
-//------------------------------------------------------------------------------------------------------------------------
-#include "stdafx.h"													      //
-#include <iostream>														  // Librerías Utilizadas
+//------------------------------------------------------------------------------------------------------------------------											      //
+#include <iostream>														  // LibrerÃ­as Utilizadas
 #include <cmath>														  //
 #include <iomanip>														  //
 using namespace std;
-double f(double);														  // Se define el tipo de variable de la función y su argumento.
-double g(double);														  // Se define el tipo de variable de la derivada de la función y su argumento.
+double f(double);														  // Se define el tipo de variable de la funciÃ³n y su argumento.
+double g(double);														  // Se define el tipo de variable de la derivada de la funciÃ³n y su argumento.
 int main()
 {
 	double x0, tolerancia, raiz, error;									  // Se definen los tipos de variables a usar.
 	int n = 1, kmax;													  // Se definen los tipos de variables a usar.
 
-	cout << " Ingrese el valor de inicial de la raiz, x0= \n " << endl;   // Se pide el ingreso del valor inicial, aproximado a la raíz.
+	cout << " Ingrese el valor de inicial de la raiz, x0= \n " << endl;   // Se pide el ingreso del valor inicial, aproximado a la raÃ­z.
 	cin >> x0;															  // Se asignan las variables a los valores ingresados.
 	cout << " Ingrese la tolerancia del resultado= \n " << endl;		  // Se pide el ingreso de la tolerancia del resultado.
 	cin >> tolerancia;													  // Se asignan las variables a los valores ingresados.
@@ -44,7 +43,7 @@ int main()
 		n++;															  // Contador (cumple la funcion de hacer k=k+1).
 		x0 = raiz;														  // Se redefine x0.
 	}																	  // Fin while.
-	cout << "SE LLEGO AL NUMERO MAXIMO DE ITERACIONES" << endl;			  // Se advierte que se termina el programa porque se llegó al numero máximo de iteraciones.
+	cout << "SE LLEGO AL NUMERO MAXIMO DE ITERACIONES" << endl;			  // Se advierte que se termina el programa porque se llegÃ³ al numero mÃ¡ximo de iteraciones.
 	return 0;
 }																		  // Fin del Programa.
 //    
