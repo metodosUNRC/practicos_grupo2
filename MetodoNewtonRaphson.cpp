@@ -1,31 +1,30 @@
-//Grupo N°2 - Fraschetti Ignacio - Torres Franco
+//Grupo NÂ°2 - Fraschetti Ignacio - Torres Franco
 //
-// Ejercicio1_NewtonRaphson.cpp: define el punto de entrada de la aplicación de consola.
+// Ejercicio1_NewtonRaphson.cpp: define el punto de entrada de la aplicaciÃ³n de consola.
 //
-// El siguiente programa determina las raíces por el método Newton-Raphson
-// Este programa determina los cruces por cero de una función, en un valor cercano al que se pedirá ingresar, dentro de una tolerancia. 
+// El siguiente programa determina las raÃ­ces por el mÃ©todo Newton-Raphson
+// Este programa determina los cruces por cero de una funciÃ³n, en un valor cercano al que se pedirÃ¡ ingresar, dentro de una tolerancia. 
 // 
 // El programa pide al usuario ingresar:
 //		Un valor inicial aproximado (x0);		
-//		La tolerancia que permitirá cortar el programa cuando el valor obtenido sea menos o igual a esta; 
-//		El número de iteraciones máximo a realizarse.
+//		La tolerancia que permitirÃ¡ cortar el programa cuando el valor obtenido sea menos o igual a esta; 
+//		El nÃºmero de iteraciones mÃ¡ximo a realizarse.
 //		     
-//------------------------------------------------------------------------------------------------------------------------
-#include "stdafx.h"														  //
-#include <iostream>														  // Librerías Usadas
+//------------------------------------------------------------------------------------------------------------------------													  //
+#include <iostream>														  // LibrerÃ­as Usadas
 #include <cmath>													      //
 #include <iomanip>														  //
 using namespace std;
 
-double f(double);														  // Se define el tipo de variable de la función y su argumento.
-double g(double);														  // Se define el tipo de variable de la derivada de la función y su argumento.
+double f(double);														  // Se define el tipo de variable de la funciÃ³n y su argumento.
+double g(double);														  // Se define el tipo de variable de la derivada de la funciÃ³n y su argumento.
 
 int main()
 {
 	double error, x0, tolerancia, x;									  // Se definen los tipos de variables a usar.
 	int k = 0, kmax;												      // Se definen los tipos de variables a usar. 
 
-	cout << " Ingrese el valor de inicial aproximado, x0= \n " << endl;   // Se pide el ingreso del valor inicial, aproximado a la raíz.
+	cout << " Ingrese el valor de inicial aproximado, x0= \n " << endl;   // Se pide el ingreso del valor inicial, aproximado a la raÃ­z.
 	cin >> x0;															  // Se asignan las variables a los valores ingresados.
 	cout << " Ingrese la tolerancia del resultado= \n " << endl;		  // Se pide el ingreso de la tolerancia del resultado.
 	cin >> tolerancia;													  // Se asignan las variables a los valores ingresados.
@@ -46,7 +45,7 @@ int main()
 		k++;															   // Contador (cumple la funcion de hacer k=k+1).
 		x0 = x;															   // Se redefine x0.
 	}																	   // Fin while.
-	cout << "SE LLEGO AL NUMERO MAXIMO DE ITERACIONES" << endl;			   // Se advierte que se termina el programa porque se llegó al numero máximo de iteraciones.
+	cout << "SE LLEGO AL NUMERO MAXIMO DE ITERACIONES" << endl;			   // Se advierte que se termina el programa porque se llegÃ³ al numero mÃ¡ximo de iteraciones.
 	system("pause");
 	return 0;
 }																		   // Fin del Programa.
