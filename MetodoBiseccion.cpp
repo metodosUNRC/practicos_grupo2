@@ -1,37 +1,36 @@
-// Grupo N°2 - Fraschetti Ignacio - Torres Franco
+// Grupo NÂ°2 - Fraschetti Ignacio - Torres Franco
 //
-// Ejercicio1_Biseccion.cpp: define el punto de entrada de la aplicación de consola.
+// Ejercicio1_Biseccion.cpp: define el punto de entrada de la aplicaciÃ³n de consola.
 //
-// El siguiente programa determina las raíces por el método de bisección
+// El siguiente programa determina las raÃ­ces por el mÃ©todo de bisecciÃ³n
 //
-// Este programa determina los cruces por cero de una función en un intervalo dado [a,b], dentro de una tolerancia especificada 
+// Este programa determina los cruces por cero de una funciÃ³n en un intervalo dado [a,b], dentro de una tolerancia especificada 
 //
 // El programa pide al usuario ingresar:
-//		Los limites alrededor de la raíz;
+//		Los limites alrededor de la raÃ­z;
 //		La tolerancia del resultado; 
-//		El número de iteraciones máximas.
+//		El nÃºmero de iteraciones mÃ¡ximas.
 //------------------------------------------------------------------------------------------------------------------------
 
 
-#include "stdafx.h"  //
-#include <iostream>  // Librerías Usadas
+#include <iostream>  // LibrerÃ­as Usadas
 #include <cmath>     //
 #include <iomanip>   //
 using namespace std;
-double f(double);    // Se define el tipo de variable de la función y su argumento.
+double f(double);    // Se define el tipo de variable de la funciÃ³n y su argumento.
 int main()
 {
-	 int kmax;       // para el numero de iteraciones máximas.
+	 int kmax;       // para el numero de iteraciones mÃ¡ximas.
 	 double a;       // 
 	 double b;       // Se define el tipo de variable.
 	 double eps;     // 
-	 cout << "Ingrese el valor de a (limite izquierdo)\n" << endl; // se pide el ingreso del límite izquierdo.
+	 cout << "Ingrese el valor de a (limite izquierdo)\n" << endl; // se pide el ingreso del lÃ­mite izquierdo.
 	 cin >> a;                                                     // se asignan las variables a los valores ingresados.
-	 cout << "ingrese el valor de b (limite derecho)\n" << endl;   // se pide el ingreso del límite derecho:
+	 cout << "ingrese el valor de b (limite derecho)\n" << endl;   // se pide el ingreso del lÃ­mite derecho:
 	 cin >> b;                                                     // se asignan las variables a los valores ingresados.
 	 cout << "Ingrese el valor de tolerancia\n" << endl;           // se pide el ingreso de la tolerancia.
 	 cin >> eps;                                                   // se asignan las variables a los valores ingresados.
-	 cout << "Ingrese el número máximo de iteraciones\n" << endl;  // se pide el ingreso del número máximo de iteraciones.
+	 cout << "Ingrese el nÃºmero mÃ¡ximo de iteraciones\n" << endl;  // se pide el ingreso del nÃºmero mÃ¡ximo de iteraciones.
 	 cin >> kmax;                                                  // se asignan las variables a los valores ingresados.
 	 		cout << "Los valores ingresados son:" << endl;         // para comprobar, se muestran los valores ingresados.
 			cout << "  a = " << a << "  b = " << b << "  tolerancia = " << eps << "  kmax = " << kmax << endl;
@@ -56,28 +55,28 @@ int main()
 						a = x;
 					}
 					x = 0.5*(b + a);
-					k++;			// Contador (cumple la función de hacer k=k+1).
+					k++;			// Contador (cumple la funciÃ³n de hacer k=k+1).
 			}						// Fin while.
 			 cout << "" << endl;	//solo para generar un espacio en la Consola. (no influye en el programa)
 			 if ((abs(x - a)) <= (abs(x - b)))
 			 {
-				 cout << " La raíz de la función es r = " << a << endl; // Muestra la raíz encontrada.
+				 cout << " La raÃ­z de la funciÃ³n es r = " << a << endl; // Muestra la raÃ­z encontrada.
 			 }
 			 else
 			 {
-				 cout << " La raíz de la función es r =" << b << endl;  // Muestra la raíz encontrada.
+				 cout << " La raÃ­z de la funciÃ³n es r =" << b << endl;  // Muestra la raÃ­z encontrada.
 			 }
 
 			 cout << " Se hicieron " << k-1 <<" iteraciones. " << endl; // Muestra la cantidad de iteraciones realizadas.
 		 }                                                       
 		 else
 		 {
-			 cout << " La función no cambia de signo en este intervalo [a,b]. Intente nuevamente. "<< endl;
+			 cout << " La funciÃ³n no cambia de signo en este intervalo [a,b]. Intente nuevamente. "<< endl;
 		 }
 	return 0;  
 }						  // Fin del Programa.
 //    
-// A continuación, defino la función.
+// A continuaciÃ³n, defino la funciÃ³n.
 //
 double f(double x)
 {
