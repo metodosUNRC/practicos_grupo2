@@ -1,32 +1,31 @@
-//Grupo N°2 - Fraschetti Ignacio - Torres Franco
+//Grupo NÂ°2 - Fraschetti Ignacio - Torres Franco
 //
-// Ejercicio1_Secante.cpp: define el punto de entrada de la aplicación de consola.
+// Ejercicio1_Secante.cpp: define el punto de entrada de la aplicaciÃ³n de consola.
 //
-// El siguiente programa determina las raíces por el método de la secante  
+// El siguiente programa determina las raÃ­ces por el mÃ©todo de la secante  
 //
-// Este programa determina los cruces por cero de una función, entre dos valores cercanos que se pedirán ingresar, dentro de una tolerancia
+// Este programa determina los cruces por cero de una funciÃ³n, entre dos valores cercanos que se pedirÃ¡n ingresar, dentro de una tolerancia
 // 
 // El programa pide al usuario ingresar:
-//		Un valor inicial ubicado a la derecha de la raíz (xd);
-//		Un valor inicial ubicado a la izquierda de la raíz (xi);		
-//		La tolerancia que permitirá cortar el programa cuando el valor obtenido sea menos o igual a esta; 
-//		El número de iteraciones máximo a realizarse.
+//		Un valor inicial ubicado a la derecha de la raÃ­z (xd);
+//		Un valor inicial ubicado a la izquierda de la raÃ­z (xi);		
+//		La tolerancia que permitirÃ¡ cortar el programa cuando el valor obtenido sea menos o igual a esta; 
+//		El nÃºmero de iteraciones mÃ¡ximo a realizarse.
 //		     
-//------------------------------------------------------------------------------------------------------------------------
-#include "stdafx.h"																			 //
+//------------------------------------------------------------------------------------------------------------------------																			 //
 #include <iostream>																			 // Librerias Utilizadas
 #include <cmath>														  				     //
 #include <iomanip>																			 //
 using namespace std;
-double f(double);																			 //Se define el tipo de variable de la función y su argumento.
+double f(double);																			 //Se define el tipo de variable de la funciÃ³n y su argumento.
 int main()
 {
 	double xd, xi, tolerancia, raiz, error;													 //Se definen los tipos de variables a usar.
 
 	int k = 1, kmax;																		 //Se definen los tipos de variables a usar.
-	cout << " Ingrese el valor inicial ubicado a la derecha de la raiz, xd= \n " << endl;    // Se pide el ingreso del valor aproximado a la raíz que se ubica a la derecha.
+	cout << " Ingrese el valor inicial ubicado a la derecha de la raiz, xd= \n " << endl;    // Se pide el ingreso del valor aproximado a la raÃ­z que se ubica a la derecha.
 	cin >> xd;																				 // Se asignan las variables a los valores ingresados.
-	cout << " Ingrese el valor inicial ubicado a la izquierda de la raiz, xi= \n " << endl;  // Se pide el ingreso del valor aproximado a la raíz que se ubica a la izquierda.
+	cout << " Ingrese el valor inicial ubicado a la izquierda de la raiz, xi= \n " << endl;  // Se pide el ingreso del valor aproximado a la raÃ­z que se ubica a la izquierda.
 	cin >> xi;																				 // Se asignan las variables a los valores ingresados.
 	cout << " Ingrese la tolerancia del resultado= \n " << endl;							 // Se pide el ingreso de la tolerancia del resultado.
 	cin >> tolerancia;																		 // Se asignan las variables a los valores ingresados.
@@ -47,7 +46,7 @@ int main()
 		xi = xd;																			 // Se redefine la variable.
 		xd = raiz;																			 // Se redefine la variable.
 	}																	                     // Fin while.
-	cout << "SE LLEGO AL NUMERO MAXIMO DE ITERACIONES" << endl;								 // Se muestra que se termina el programa porque se llegó al numero máximo de iteraciones.
+	cout << "SE LLEGO AL NUMERO MAXIMO DE ITERACIONES" << endl;								 // Se muestra que se termina el programa porque se llegÃ³ al numero mÃ¡ximo de iteraciones.
 	return 0;
 }																							 // Fin del Programa.
 //    
